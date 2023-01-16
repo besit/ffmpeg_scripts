@@ -7,7 +7,7 @@ These scripts make it easy to convert video files like .mp4 and .mov to GIFs usi
 
 ## Windows
 ### Usage
-1. Download and install ffmpeg on your computer. ([You can use this guide for example](https://www.wikihow.com/Install-FFmpeg-on-Windows))
+1. Download and install ffmpeg on your computer. [You can use this guide for example](https://www.wikihow.com/Install-FFmpeg-on-Windows)
 2. Clone or download the repository to your local machine.
 3. Scripts `video_to_gif_folder_s05.bat` and `video_to_gif_folder_w640.bat` can be copied to folder with video files and run from there. They will create a "GIF" folder and put all the *.gif there.
 4. Scripts `video_to_gif_choose_files_s05.bat` and `video_to_gif_choose_files_w640.bat` open a dialog box and let you to choose 1 or more video files to be processed. The results would be in the same folder with *.gif extension.
