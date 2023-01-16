@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Scale relative to video frame size
+SCALE=0.5
+# FPS for the GIF
+FPS=12
+
+f=$(osascript -e 'tell app "Finder" to POSIX path of (choose file with prompt "Please select a file:")')
+
+
+if [ ! -e "${f%.*}.gif" ]; then
+	ffmpeg -i "$f" -vf "fps=$FPS,scale=iw*$SCALE:ih*$SCALE,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "${f%.*}.gif";
+fi

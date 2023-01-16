@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# List of file extensions in format "*.ext1" "*.ext2" "*.ext3"
+extensions=("*.mp4" "*.mov")
+# Scale relative to video frame size
+SCALE=0.5
+# FPS for the GIF
+FPS=12
+
+cd $(dirname $0)
+[ -d gif ] || mkdir gif
+cd $(dirname $0)
+
+for ext in "${extensions[@]}"
+do
+	for f in $ext; 
+	do 
+		if [ ! -e "gif/${f%.*}.gif" ]; then
+			ffmpeg -i "$f" -vf "fps=$FPS,scale=iw*$SCALE:ih*$SCALE,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "gif/${f%.*}.gif";
+		fi
+	done
+done
+
+exit

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Width of the GIF
+WIDTH=640
+# FPS for the GIF
+FPS=12
+
+folder=$(osascript -e 'tell application "Finder" to POSIX path of (choose folder with prompt "Select a folder")')
+
+cd $folder
+[ -d gif ] || mkdir gif
+cd $folder
+
+extensions=("*.mp4" "*.mov")  # list of file extensions
+
+for ext in "${extensions[@]}"
+do
+	for f in $ext; 
+	do 
+		if [ ! -e "gif/${f%.*}.gif" ]; then
+			ffmpeg -i "$f" -vf "fps=$FPS,scale=$WIDTH:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "gif/${f%.*}.gif";
+		fi
+	done
+done
