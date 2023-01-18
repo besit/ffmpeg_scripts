@@ -1,6 +1,6 @@
 # Video-to-GIF Scripts
 
-These scripts make it easy to convert video files like .mp4 and .mov to GIFs using ffmpeg.
+These scripts make it easy to convert video files like .mp4 and .mov to GIFs using ffmpeg. Mac and Windows scripts available.
 
 ## Prerequisites
 * [ffmpeg](https://ffmpeg.org/) - The command-line tool used to convert the videos
