@@ -3,7 +3,7 @@
 These scripts make it easy to convert video files like .mp4 and .mov to GIFs using ffmpeg. Mac and Windows scripts available.
 
 ## Prerequisites
-* [ffmpeg](https://ffmpeg.org/) - The command-line tool used to convert the videos. O could have provided links on guides, but not to promote any specific one, you can easily google them. On Mac you would just need to enter 3-5 commands in the Terminal app. For Windows you need to [download .zip archive](https://ffmpeg.org/download.html), extract it where you like (C:/Program Files/ffmpeg for example) and add this path to PATH environment variable on your computer.
+* [ffmpeg](https://ffmpeg.org/) - The command-line tool used to convert the videos. I could have provided links on guides, but not to promote any specific one, you can easily google them. On Mac you would just need to enter 3-5 commands in the Terminal app. For Windows you need to [download .zip archive](https://ffmpeg.org/download.html), extract it where you like (C:/Program Files/ffmpeg for example) and add this path to PATH environment variable on your computer.
 
 ## Windows
 ### Usage
